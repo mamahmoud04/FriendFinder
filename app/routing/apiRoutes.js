@@ -1,10 +1,10 @@
 var path = require("path");
 
 // bring in the list of friends
-var friends = require('/data/friends.js')
+var friends = require('../data/friends')
 
 module.exports = function (app) {
-    app.get(/api/friends, function (req, res) {
+    app.get("/api/friends", function (req, res) {
         res.json(friends);
     });
     app.post('/api/friends', function (req, res) {
